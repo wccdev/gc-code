@@ -2637,7 +2637,7 @@ impl CollabPanel {
 
         // Two distinct "not connected" states:
         //   - Authenticated (has credentials): user just needs to connect.
-        //   - Unauthenticated (no credentials): user needs to sign in via GitHub.
+        //   - Unauthenticated (no credentials): user needs to sign in.
         let is_authenticated = self.client.user_id().is_some();
         let status = *self.client.status().borrow();
         let is_busy = status.is_signing_in();
@@ -2654,9 +2654,9 @@ impl CollabPanel {
                 if is_busy {
                     "Signing in…"
                 } else {
-                    "Sign In with GitHub"
+                    "Sign In"
                 },
-                IconName::Github,
+                IconName::ArrowCircle,
             )
         };
 

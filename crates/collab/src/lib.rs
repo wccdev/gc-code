@@ -137,6 +137,7 @@ pub struct Config {
     pub kinesis_secret_key: Option<String>,
     pub zed_environment: Arc<str>,
     pub zed_client_checksum_seed: Option<String>,
+    pub zed_cloud_url: Option<String>,
 }
 
 impl Config {
@@ -154,7 +155,13 @@ impl Config {
     }
 
     /// Returns the base Zed Cloud URL.
+    ///
+    /// If `zed_cloud_url` is set in the config, that value is used directly.
+    /// Otherwise falls back to the default based on `zed_environment`.
     pub fn zed_cloud_url(&self) -> &str {
+        if let Some(url) = &self.zed_cloud_url {
+            return url.as_str();
+        }
         match self.zed_environment.as_ref() {
             "development" => "http://localhost:8787",
             _ => "https://cloud.zed.dev",
@@ -180,6 +187,7 @@ impl Config {
             blob_store_secret_key: None,
             blob_store_bucket: None,
             zed_client_checksum_seed: None,
+            zed_cloud_url: None,
             seed_path: None,
             kinesis_region: None,
             kinesis_access_key: None,
