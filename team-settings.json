@@ -1,0 +1,141 @@
+{
+  // ============================================================
+  // 团队精简配置 - 复制到 ~/.config/zed/settings.json 使用
+  // 或放到项目 .zed/settings.json 中作为项目级配置
+  // ============================================================
+
+  // ======================== AI / Agent ========================
+  // 完全禁用所有 AI 功能（Agent面板、内联助手等）
+  "disable_ai": true,
+  "agent": {
+    "enabled": false,
+    "button": false
+  },
+  // 编辑预测（代码补全建议）
+  "edit_predictions": {
+    "provider": "none"
+  },
+
+  // ======================== 标题栏 ========================
+  "title_bar": {
+    "show_menus": false,              // 应用菜单
+    "show_branch_icon": false,        // 分支图标
+    "show_branch_name": true,         // 分支名称
+    "show_project_items": true,       // 项目名称
+    "show_onboarding_banner": false,  // 新手引导横幅
+    "show_user_picture": true,        // 用户头像
+    "show_user_menu": true,           // 用户菜单
+    "show_sign_in": true              // 登录按钮
+  },
+
+  // ======================== 面板按钮（状态栏入口）========================
+  // button: false = 隐藏状态栏上的面板入口按钮
+  "project_panel": {
+    "button": true,
+    "starts_open": true
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": true,
+    "starts_open": false,
+    "show_count_badge": false
+  },
+  "terminal": {
+    "button": true
+  },
+  "debugger": {
+    "button": false
+  },
+
+  // ======================== 编辑器工具栏 ========================
+  "toolbar": {
+    "breadcrumbs": true,       // 面包屑导航
+    "quick_actions": false,    // 快捷操作按钮
+    "selections_menu": false,  // 选区菜单
+    "agent_review": false,     // Agent 审查按钮
+    "code_actions": false      // 代码操作按钮
+  },
+
+  // ======================== Tab 栏 ========================
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true,
+    "show_tab_bar_buttons": true
+  },
+
+  // ======================== 状态栏 ========================
+  "status_bar": {
+    "experimental.show": true,
+    "show_active_file": false,
+    "active_language_button": true,
+    "cursor_position_button": true,
+    "line_endings_button": false
+  },
+  // 诊断按钮
+  "diagnostics": {
+    "button": true
+  },
+  // LSP 状态按钮
+  "lsp": {
+    "button": false
+  },
+
+  // ======================== 编辑器功能开关 ========================
+  // 滚动条
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_text": true,
+    "diagnostics": "all"
+  },
+  // 缩略图
+  "minimap": {
+    "show": "never"
+  },
+  // 粘性滚动
+  "sticky_scroll": {
+    "enabled": false
+  },
+  // 内联提示
+  "inlay_hints": {
+    "enabled": false
+  },
+  // Jupyter
+  "jupyter": {
+    "enabled": false
+  },
+  // 快捷键提示弹窗
+  "which_key": {
+    "enabled": false
+  },
+
+  // ======================== Git ========================
+  "git": {
+    "disable_git": false,
+    "enable_status": true,
+    "enable_diff": true,
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true
+    }
+  },
+
+  // ======================== 遥测 ========================
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // ======================== 自动更新 ========================
+  "auto_update": false,
+
+  // ======================== 扩展 ========================
+  "auto_install_extensions": {}
+}
